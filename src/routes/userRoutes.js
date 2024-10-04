@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
-// CREATE: Rota para adicionar um novo usuário
+// Create
 router.post('/users', async (req, res) => {
   const { name, email, age } = req.body;
   try {
@@ -16,7 +16,7 @@ router.post('/users', async (req, res) => {
   }
 });
 
-// READ: Rota para listar todos os usuários
+// Read
 router.get('/users', async (req, res) => {
   try {
     const users = await User.sequelize.query(
@@ -29,7 +29,7 @@ router.get('/users', async (req, res) => {
   }
 });
 
-// READ: Rota para obter um único usuário pelo ID
+// Read pelo ID
 router.get('/users/:id', async (req, res) => {
   const { id } = req.params;
   try {
@@ -44,7 +44,8 @@ router.get('/users/:id', async (req, res) => {
   }
 });
 
-// UPDATE: Rota para atualizar um usuário
+// Update
+
 router.put('/users/:id', async (req, res) => {
   const { id } = req.params;
   const { name, email, age } = req.body;
@@ -59,7 +60,7 @@ router.put('/users/:id', async (req, res) => {
   }
 });
 
-// DELETE: Rota para excluir um usuário
+// Delete
 router.delete('/users/:id', async (req, res) => {
   const { id } = req.params;
   try {
