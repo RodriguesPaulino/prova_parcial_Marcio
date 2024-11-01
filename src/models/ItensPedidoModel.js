@@ -17,7 +17,7 @@ const ItensPedidoModel = Connection.define(
         type: DataTypes.INTEGER,
         allowNull: false,
             references: {
-                model: 'pedidos',
+                model: PedidoModel,
                 key: 'id'
             }
 
@@ -27,7 +27,7 @@ const ItensPedidoModel = Connection.define(
         type: DataTypes.INTEGER,
         allowNull: false,
             references: {
-                model: 'produtos',
+                model: produtoModel,
                 key: 'id'
             },
 

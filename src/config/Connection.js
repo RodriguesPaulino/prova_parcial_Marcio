@@ -5,7 +5,6 @@ const sequelize = new Sequelize(process.env.MYSQL_DB, process.env.MYSQL_USER, pr
   dialect: 'mysql',
 });
 
-
 (async () => {
     try {
       await sequelize.authenticate();
@@ -15,6 +14,9 @@ const sequelize = new Sequelize(process.env.MYSQL_DB, process.env.MYSQL_USER, pr
     }
   })();
 
- 
+  (async () => {
+    await Connection.sync({ force: false });
+    console.log("Tabelas sincronizadas!");
+})();
 
-module.exports = sequelize;
+ module.exports = sequelize;

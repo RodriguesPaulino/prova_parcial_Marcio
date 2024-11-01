@@ -32,7 +32,7 @@ const Produto = sequelize.define('Produto', {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: 'categoria',
+      model: CategoriaModel,
       key: 'id_categoria',
     },
   }
@@ -41,4 +41,4 @@ const Produto = sequelize.define('Produto', {
   tableName: 'produtos'
 });
 
-module.exports = Produto;
+module.exports = ProdutoModel;

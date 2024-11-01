@@ -12,7 +12,7 @@ const CategoriaModel = Connection.define(
             type: DataTypes.INTEGER,
             allowNull: true,
             references: {
-                model: 'categoria',
+                model: CategoriaModel,
                 key: 'id',
             },
             

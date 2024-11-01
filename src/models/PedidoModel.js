@@ -28,7 +28,7 @@ const PedidoModel = Connection.define(
         type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'UserModel',
+                model: UserModel,
                 key: 'id',
             },
         },
@@ -36,7 +36,7 @@ const PedidoModel = Connection.define(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'TipoPagamentoModel',
+                model: TipoPagamentoModel,
                 key: 'id',
             },
         },
@@ -44,7 +44,7 @@ const PedidoModel = Connection.define(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'TransacoesModel',
+                model: TransacoesModel,
                 key: 'id',
             },
         }
