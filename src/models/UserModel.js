@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const Connection = require('../config/Connection');
 const TypeUserModel = require('./TypeUserModel');
 
+
 const UserModel = Connection.define(
     'UserModel',
     {

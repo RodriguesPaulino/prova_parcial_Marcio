@@ -1,5 +1,7 @@
 const { DataTypes } = require('sequelize');
 const Connection = require('../config/Connection')
+const PedidoModel = require('../models/PedidoModel');
+const ProdutoModel = require('../models/ProdutoModel');
 
 const ItensPedidoModel = Connection.define(
     'ItensPedidoModel',
@@ -27,7 +29,7 @@ const ItensPedidoModel = Connection.define(
         type: DataTypes.INTEGER,
         allowNull: false,
             references: {
-                model: produtoModel,
+                model: ProdutoModel,
                 key: 'id'
             },
 

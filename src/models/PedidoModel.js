@@ -1,5 +1,9 @@
 const { DataTypes } = require('sequelize');
 const Connection = require('../config/Connection')
+const UserModel = require('../models/UserModel');
+const TipoPagamentoModel = require('../models/TipoPagamentoModel');
+const TransacoesModel = require('../models/TransacoesModel');
+
 
 const PedidoModel = Connection.define(
     'PedidoModel',

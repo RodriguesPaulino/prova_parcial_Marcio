@@ -11,16 +11,18 @@ const CategoriaModel = Connection.define(
         id_categoria_pai: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            references: {
-                model: CategoriaModel,
-                key: 'id',
-            },
             
         }
     },
     {
         tableName: 'categoria',
     }
-)
+);
+
+CategoriaModel.belongsTo(CategoriaModel, {
+    foreignKey: 'id_categoria_pai',
+    as: 'categoriapai',
+
+});
 
 module.exports = CategoriaModel;

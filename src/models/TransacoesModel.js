@@ -9,7 +9,7 @@ const TransacoesModel = Connection.define(
             allowNull: false
         },
         data_hora: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             allowNull: false
         },
         status_transacao: {
